@@ -1,0 +1,38 @@
+import 'dart:io';
+import 'dart:math';
+
+import 'package:flutter/foundation.dart';
+import 'package:critt_v2/core/config/api.dart';
+import 'package:critt_v2/core/model/models.dart';
+import 'package:critt_v2/core/providers/providers.dart';
+import 'package:critt_v2/core/utils/dialog_utils.dart';
+import 'package:critt_v2/ui/constants/constants.dart';
+import 'package:critt_v2/ui/screens/screens.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'dart:convert';
+import 'package:critt_v2/core/services/base/config_service.dart';
+import 'package:dio/dio.dart';
+import 'package:dio/src/form_data.dart' as dioForm;
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+part 'article/article_services.dart';
+part 'auth/auth_services.dart';
+part 'bank_services/bank_services.dart';
+part 'receiver/receiver_services.dart';
+part 'transaction/transaction_services.dart';
+part 'transaction/invoice_services.dart';
+part 'base/base_service.dart';
+part 'sharedpreferances/ServicePreferances.dart';
+part 'firebase/fcm_services.dart';
+part 'firebase/storage_services.dart';
+part 'refund/refund_services.dart';
+part 'cs_services.dart';
