@@ -26,61 +26,27 @@ class _LandingScreenState extends State<LandingScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(height: 40),
-          Container(child: Image.asset('assets/images/logo-text.png')),
-          SizedBox(height: 40),
           Container(
-            width: deviceWidth(context),
-            height: deviceHeight(context) / 2,
-            child: PageView(
-              controller: controller,
-              scrollDirection: Axis.horizontal,
-              children: [
-                Column(
-                  children: [
-                    Container(
-                      height: 300,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: AssetImage('assets/images/intro2.png'))),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        'Dengan $appName transfer beda bank di Indonesia menjadi lebih hemat',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 16),
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Container(
-                      height: 300,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: AssetImage('assets/images/intro1.png'))),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        '$appName dipercaya lebih dari 1 juta pengguna. Yuk mulai kirim uang sekarang!',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 16),
-                      ),
-                    )
-                  ],
-                ),
-              ],
+              margin: EdgeInsets.symmetric(vertical: 40),
+              child: Image.asset('assets/images/logo-text.png',
+                  width: 200, height: 200)),
+          Expanded(
+            child: Container(
+              width: deviceWidth(context),
+              child: PageView(
+                controller: controller,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Slider(
+                      src: 'assets/images/intro2.png',
+                      message:
+                          "Dengan $appName transfer beda bank di Indonesia menjadi lebih hemat"),
+                  Slider(
+                      src: 'assets/images/intro1.png',
+                      message:
+                          '$appName dipercaya lebih dari 1 juta pengguna. Yuk mulai kirim uang sekarang!'),
+                ],
+              ),
             ),
           ),
           Container(
@@ -106,10 +72,8 @@ class _LandingScreenState extends State<LandingScreen> {
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
                   color: primaryColor,
                   onPressed: () {
-                    // AuthService.instance.register('Budi', 'asu@asu.id', 'sdasdsa', '911', context);
                     Provider.of<AuthProvider>(context, listen: false)
                         .login(context);
-                    //Navigator.push(context, MaterialPageRoute(builder: (_)=>RegisterScreen()));
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -125,6 +89,35 @@ class _LandingScreenState extends State<LandingScreen> {
                   ))),
         ],
       ),
+    );
+  }
+}
+
+class Slider extends StatelessWidget {
+  final String? src;
+  final String? message;
+  const Slider({Key? key, this.src, this.message}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 300,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.scaleDown, image: AssetImage(src!))),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: Text(
+            message!,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.poppins(
+                color: Colors.black, fontWeight: FontWeight.w300, fontSize: 16),
+          ),
+        )
+      ],
     );
   }
 }
