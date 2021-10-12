@@ -1,0 +1,109 @@
+{
+  "project_info": {
+    "project_number": "976072875785",
+    "firebase_url": "https://critt-f0fb7.firebaseio.com",
+    "project_id": "critt-f0fb7",
+    "storage_bucket": "critt-f0fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976072875785:android:75b873f4ad04489fff7dd8",
+        "android_client_info": {
+          "package_name": "com.app.critt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976072875785-1v73q3ar66c0386a2h26hbgld4a2bqsv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.critt",
+            "certificate_hash": "e9190f11b3dd24e1d48795f6d78ec6386940a136"
+          }
+        },
+        {
+          "client_id": "976072875785-4ndt0oab6144hukvr2bl84pae4hdspqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.critt",
+            "certificate_hash": "831d0a4e0b921acc10e1e24eb138c59c19257731"
+          }
+        },
+        {
+          "client_id": "976072875785-l62dlee2vihjvp074acu22oh9ov1dcpi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.critt",
+            "certificate_hash": "2b69a8d91034bd70a7dc5ce08ab044c0134585a6"
+          }
+        },
+        {
+          "client_id": "976072875785-pdvuvp8l5q59etgaqrum7u9ttu3n4vpl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.critt",
+            "certificate_hash": "0fee0d4cb23e2690b044d168023ab13824512a0a"
+          }
+        },
+        {
+          "client_id": "976072875785-grb40umd285c97lp28228bei2np1sbp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6WiiJBFRqcc8QeBqyccYYfu1Gg6A3aIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976072875785-grb40umd285c97lp28228bei2np1sbp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976072875785:android:7cde2b537a483cb2ff7dd8",
+        "android_client_info": {
+          "package_name": "com.critt.transfer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976072875785-chd3vc0m0hck5sq4toru4i1psfjbn0rq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.critt.transfer",
+            "certificate_hash": "0fee0d4cb23e2690b044d168023ab13824512a0a"
+          }
+        },
+        {
+          "client_id": "976072875785-grb40umd285c97lp28228bei2np1sbp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6WiiJBFRqcc8QeBqyccYYfu1Gg6A3aIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976072875785-grb40umd285c97lp28228bei2np1sbp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
