@@ -57,7 +57,6 @@ class BaseServices {
 
     //* Handling error and status code
     response = json.decode(response.toString());
-    print(response);
     // if (response == null) {
     //   errorToast("Terjadi kesalahan");
     //   return null;

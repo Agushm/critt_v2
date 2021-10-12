@@ -21,7 +21,6 @@ class AuthProvider extends ChangeNotifier {
 
       _user = data["user"];
       ServicePreferances.instance.saveData("userData", json.encode(_user));
-      print("AUTH" + json.encode(_user));
       Get.offAll(IndexScreen());
     }
     notifyListeners();

@@ -27,7 +27,7 @@ class _LandingScreenState extends State<LandingScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-              margin: EdgeInsets.symmetric(vertical: 40),
+              margin: EdgeInsets.only(top: 20, bottom: 10),
               child: Image.asset('assets/images/logo-text.png',
                   width: 200, height: 200)),
           Expanded(
@@ -51,7 +51,7 @@ class _LandingScreenState extends State<LandingScreen> {
           ),
           Container(
             alignment: AlignmentDirectional.bottomCenter,
-            margin: EdgeInsets.only(bottom: 20.0, top: 20),
+            margin: EdgeInsets.only(bottom: 20.0, top: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
@@ -64,29 +64,32 @@ class _LandingScreenState extends State<LandingScreen> {
             ),
           ),
           Container(
-              margin: EdgeInsets.symmetric(horizontal: 40),
-              child: MaterialButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(60)),
-                  elevation: 5,
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
-                  color: primaryColor,
-                  onPressed: () {
-                    Provider.of<AuthProvider>(context, listen: false)
-                        .login(context);
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      SvgPicture.asset(
-                        "assets/icons/google.svg",
-                        height: 20,
-                      ),
-                      SizedBox(width: 5),
-                      Text("Masuk Dengan Google",
-                          style: GoogleFonts.poppins(color: Colors.white)),
-                    ],
-                  ))),
+            margin: EdgeInsets.symmetric(horizontal: 40),
+            child: MaterialButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(60)),
+              elevation: 5,
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+              color: primaryColor,
+              onPressed: () {
+                Provider.of<AuthProvider>(context, listen: false)
+                    .login(context);
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SvgPicture.asset(
+                    "assets/icons/google.svg",
+                    height: 20,
+                  ),
+                  SizedBox(width: 5),
+                  Text("Masuk Dengan Google",
+                      style: GoogleFonts.poppins(color: Colors.white)),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
         ],
       ),
     );
@@ -103,10 +106,11 @@ class Slider extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 300,
+          width: 2000,
+          height: 200,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  fit: BoxFit.scaleDown, image: AssetImage(src!))),
+              image:
+                  DecorationImage(fit: BoxFit.fill, image: AssetImage(src!))),
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 20),

@@ -147,9 +147,10 @@ class _ConfirmTransactionScreenState extends State<ConfirmTransactionScreen> {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   onPressed: () {
-                    Share.share(
-                        'Kirim uang lewat $appName mudah,cepat dan tidak kena biaya transfer',
-                        subject: 'Kemahalan biaya transfer beda bank?');
+                    shareText(context,
+                        subject: 'Kemahalan biaya transfer beda bank?',
+                        text:
+                            'Kirim uang lewat $appName mudah,cepat dan tidak kena biaya transfer');
                   },
                   child: Text('Ajak Teman',
                       style: GoogleFonts.poppins(

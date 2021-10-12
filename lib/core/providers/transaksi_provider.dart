@@ -333,7 +333,7 @@ class TransaksiProvider extends ChangeNotifier {
 
   //* Invoice
   ScreenshotController invoiceController = ScreenshotController();
-  void shareInvoice(Transaction data) {
+  void shareInvoice(BuildContext context, Transaction data) {
     invoiceController
         .capture(pixelRatio: 2.5, delay: Duration(milliseconds: 10))
         .then((image) async {
@@ -341,7 +341,8 @@ class TransaksiProvider extends ChangeNotifier {
       final File imageFile =
           File('$temp/Critt-${DateTime.now().millisecondsSinceEpoch}.png');
       imageFile.writeAsBytesSync(image!);
-      Share.shareFiles([imageFile.path],
+      shareFiles(context,
+          images: [imageFile.path],
           text:
               '${data.invoiceNumber}\n\n${appName.toUpperCase()}\nTransfer uang antar bank gratis tanpa biaya admin.');
     }).catchError((onError) {

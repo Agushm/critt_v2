@@ -29,9 +29,8 @@ class Bank {
     atasNama = json['atas_nama'];
     bankMethod = json['bank_method'] == null
         ? []
-        : json['bank_method'].forEach((v) {
-            bankMethod.add(BankMethod.fromJson(v));
-          });
+        : List<BankMethod>.from(
+            json["bank_method"].map((x) => BankMethod.fromJson(x)));
     status = json['status'];
   }
 

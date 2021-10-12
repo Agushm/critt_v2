@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart' as firebase_core;
+import 'package:responsive_framework/responsive_framework.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,6 +59,19 @@ class MyApp extends StatelessWidget {
             },
           ),
         ),
+        builder: (context, widget) => ResponsiveWrapper.builder(
+            BouncingScrollWrapper.builder(context, widget!),
+            maxWidth: 450,
+            minWidth: 375,
+            defaultScale: true,
+            breakpoints: [
+              const ResponsiveBreakpoint.resize(450, name: MOBILE),
+              const ResponsiveBreakpoint.resize(800, name: MOBILE),
+              const ResponsiveBreakpoint.resize(1000, name: MOBILE),
+              const ResponsiveBreakpoint.resize(1200, name: MOBILE),
+              const ResponsiveBreakpoint.autoScale(2460, name: MOBILE),
+            ],
+            background: Container(color: Color(0xFFF1F1F1))),
         home: SplashScreen(),
         // TransactionDetail(data: Transaction(
         //   invoiceNumber: "#FT27754233",

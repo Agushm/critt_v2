@@ -8,6 +8,7 @@ import 'package:critt_v2/core/services/services.dart';
 import 'package:critt_v2/core/utils/currency_utils.dart';
 import 'package:critt_v2/core/utils/dialog_utils.dart';
 import 'package:critt_v2/core/utils/html_widgets.dart';
+import 'package:critt_v2/core/utils/share.dart';
 import 'package:critt_v2/core/utils/url_launcher.dart';
 import 'package:critt_v2/ui/constants/constants.dart';
 import 'package:critt_v2/ui/screens/beranda/widgets/header_beranda.dart';

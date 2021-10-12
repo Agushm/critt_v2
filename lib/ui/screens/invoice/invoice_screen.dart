@@ -201,7 +201,8 @@ class _InvoiceScreenState extends State<InvoiceScreen> {
                               delay: Duration(milliseconds: 10))
                           .then((image) async {
                         File _image = File.fromRawPath(image!);
-                        Share.shareFiles([_image.path],
+                        shareFiles(context,
+                            images: [_image.path],
                             text:
                                 '${widget.data!.invoiceNumber}\n\n${appName.toUpperCase()}\nTransfer uang antar bank gratis tanpa biaya admin.');
                       }).catchError((onError) {

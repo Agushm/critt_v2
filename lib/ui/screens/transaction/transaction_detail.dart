@@ -442,7 +442,7 @@ class TransactionDetail extends StatelessWidget {
                                     onPressed: () async {
                                       Provider.of<TransaksiProvider>(context,
                                               listen: false)
-                                          .shareInvoice(data!);
+                                          .shareInvoice(context, data!);
                                     },
                                     child: Row(
                                       children: [

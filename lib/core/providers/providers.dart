@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:critt_v2/core/services/services.dart';
 import 'package:critt_v2/core/utils/dialog_utils.dart';
+import 'package:critt_v2/core/utils/share.dart';
 import 'package:critt_v2/ui/constants/constants.dart';
 import 'package:critt_v2/ui/screens/screens.dart';
 import 'package:critt_v2/core/model/models.dart';
