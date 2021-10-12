@@ -109,8 +109,8 @@ class Slider extends StatelessWidget {
           width: 2000,
           height: 200,
           decoration: BoxDecoration(
-              image:
-                  DecorationImage(fit: BoxFit.fill, image: AssetImage(src!))),
+              image: DecorationImage(
+                  fit: BoxFit.scaleDown, image: AssetImage(src!))),
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 20),

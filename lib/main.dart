@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
               const ResponsiveBreakpoint.resize(1200, name: MOBILE),
               const ResponsiveBreakpoint.autoScale(2460, name: MOBILE),
             ],
-            background: Container(color: Color(0xFFF1F1F1))),
+            background: Container(color: Color(0xFFFFFFFF))),
         home: SplashScreen(),
         // TransactionDetail(data: Transaction(
         //   invoiceNumber: "#FT27754233",
