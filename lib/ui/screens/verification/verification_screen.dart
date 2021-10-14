@@ -28,7 +28,6 @@ class _VerificationScreenState extends State<VerificationScreen> {
       });
       var data = await Provider.of<AuthProvider>(context, listen: false)
           .getUser(context);
-      print("Verification Data $data");
       setState(() {
         isLoading = false;
         verifData = data;

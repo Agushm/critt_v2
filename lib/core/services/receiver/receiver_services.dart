@@ -28,7 +28,6 @@ class ReceiverService extends BaseServices {
       context,
       useToken: true,
     );
-    print("GET DAFTAR RECEIVER ======= ${res["data"]}");
     if (res["status"] == "success") {
       return {
         'current_page': res['current_page'],

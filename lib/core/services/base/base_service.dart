@@ -42,27 +42,23 @@ class BaseServices {
           break;
       }
     } on DioError catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: const Text('Terjadi Kesalahan'),
-
-        duration: const Duration(seconds: 3),
-        // action: SnackBarAction(
-        //   label: 'ACTION',
-        //   onPressed: () {},
-        // ),
-      ));
-      response = e.response;
+      var code = e.response!.statusCode!;
+      if (code >= 400) {
+        DialogUtils.instance.showChooseLogin(
+            context,
+            "Terjadi kesalahan, silahkan ulangi login",
+            Icons.error,
+            "Halaman Login", onClick: () {
+          Get.offAll(LandingScreen());
+        });
+      }
       return null;
     }
 
     //* Handling error and status code
     response = json.decode(response.toString());
-    // if (response == null) {
-    //   errorToast("Terjadi kesalahan");
-    //   return null;
-    // }
 
-    if (response != null && response["status"].toString() == "401") {
+    if (response["status"].toString() == "401") {
       DialogUtils.instance.showChooseLogin(
           context,
           "Terjadi kesalahan, silahkan ulangi login",

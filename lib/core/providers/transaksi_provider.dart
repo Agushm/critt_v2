@@ -84,7 +84,6 @@ class TransaksiProvider extends ChangeNotifier {
         bankNumber: bankNumber,
         nameAccount: nameAccount,
       );
-      print("RECEIVER $data");
     }
     if (penerima.isEmpty) {
       penerima.add({
@@ -117,7 +116,6 @@ class TransaksiProvider extends ChangeNotifier {
     nominal.split(".").forEach((e) {
       _nominal = _nominal + e;
     });
-    print("Nominal:$_nominal,Berita:$berita");
     var last = penerima.last;
     int index = penerima.indexOf(last);
 
@@ -131,7 +129,6 @@ class TransaksiProvider extends ChangeNotifier {
       "berita": berita,
       "biaya": "0"
     };
-    print(penerima.toString());
     notifyListeners();
   }
 
@@ -272,7 +269,6 @@ class TransaksiProvider extends ChangeNotifier {
       {bool? isUpdateTransaction}) async {
     var res = await TransactionService.instance
         .uploadBuktiTransfer(context, data: data);
-    print("URL BUKTI TRANSFER = ${res!["data"]}");
     if (res != null) {
       if (isUpdateTransaction != null && isUpdateTransaction == true) {
         transaction.approveUser = res['data'];

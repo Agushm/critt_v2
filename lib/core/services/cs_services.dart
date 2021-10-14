@@ -11,7 +11,6 @@ class CSService extends BaseServices {
       context,
       useToken: true,
     );
-    print("URL=>${Api.cs}");
     if (res["status"] == "success") {
       List<CustomerService> load = [];
       res['data'].forEach((e) => load.add(CustomerService.fromJson(e)));
